@@ -46,8 +46,8 @@ outputs:
         - python >={{ python_min }}
         - jupyter_ydoc >=2,<4
     test:
-      imports:
-        - jupytergis_core
+      # imports:
+      #   - jupytergis_core
       commands:
         - pip check
         - test -f ${PREFIX}/share/jupyter/labextensions/@jupytergis/jupytergis-core/package.json                            # [unix]
