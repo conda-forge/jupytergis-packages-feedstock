@@ -16,17 +16,20 @@ source:
   - url: https://pypi.org/packages/source/j/jupytergis_qgis/jupytergis_qgis-{{ version }}.tar.gz
     sha256: 26ef5c5890271ba679a427f25da89f255ffd33442624a1ab791c2f26c02dee3f
     folder: jupytergis_qgis
+  - url: https://pypi.org/packages/source/j/jupytergis_lite/jupytergis_lite-{{ version }}.tar.gz
+    sha256: b71cf76cdb5c0638428908d4dadb1f0ddc1c6bdd6ebe1746f7b02c418b96819a
+    folder: jupytergis_lite
   - url: https://pypi.org/packages/source/j/jupytergis/jupytergis-{{ version }}.tar.gz
     sha256: 9d4f516685eee9316bd9e595b63c907bdc61e92fde672e611ea07ffbf11cef85
     folder: jupytergis
 
 build:
   noarch: python
-  number: 0
+  number: 1
 
 
 outputs:
-  - name: jupytergis_core
+  - name: jupytergis-core
     version: {{ version }}
     build:
       noarch: python
@@ -55,7 +58,7 @@ outputs:
       requires:
         - pip
 
-  - name: jupytergis_lab
+  - name: jupytergis-lab
     version: {{ version }}
     build:
       noarch: python
@@ -78,9 +81,9 @@ outputs:
         - yjs-widgets >=0.4,<0.5
         - comm >=0.1.2,<0.2
         - pydantic >=2,<3
-        - jupytergis_core
+        - jupytergis-core
       run_constrained:
-        - jupytergis_core ={{ version }}
+        - jupytergis-core ={{ version }}
     test:
       imports:
         - jupytergis_lab.notebook.gis_document
@@ -90,7 +93,7 @@ outputs:
       requires:
         - pip
 
-  - name: jupytergis_qgis
+  - name: jupytergis-qgis
     version: {{ version }}
     build:
       noarch: python
@@ -110,18 +113,45 @@ outputs:
         - python >={{ python_min }}
         - jupyter_server >=2.0.1,<3
         - jupyter_ydoc >=2,<4
-        - jupytergis_core
-        - jupytergis_lab
+        - jupytergis-core
+        - jupytergis-lab
       run_constrained:
         - jupyterlab >=4,<5
-        - jupytergis_lab ={{ version }}
-        - jupytergis_core ={{ version }}
+        - jupytergis-lab ={{ version }}
+        - jupytergis-core ={{ version }}
     test:
       imports:
         - jupytergis_qgis.qgis_loader
       requires:
         - pip
         - qgis
+
+  - name: jupytergis-lite
+    version: {{ version }}
+    build:
+      noarch: python
+      script: |
+        cd jupytergis_lite
+        python -m pip install . -vv --no-deps --no-build-isolation --ignore-installed --no-index
+    requirements:
+      host:
+        - pip
+        - python {{ python_min }}
+        - hatchling
+      run:
+        - python >={{ python_min }}
+        - jupytergis-core
+        - jupytergis-lab
+        - my-jupyter-shared-drive
+      run_constrained:
+        - jupytergis-core ={{ version }}
+        - jupytergis-lab ={{ version }}
+    test:
+      imports:
+        - jupytergis
+      requires:
+        - pip
+        - python {{ python_min }}
 
   - name: jupytergis
     version: {{ version }}
@@ -137,15 +167,15 @@ outputs:
         - hatchling
       run:
         - python >={{ python_min }}
-        - jupytergis_core
-        - jupytergis_lab
-        - jupytergis_qgis
+        - jupytergis-core
+        - jupytergis-lab
+        - jupytergis-qgis
         - jupyter-collaboration >=3,<4
         - jupyterlab >=4.3,<5
       run_constrained:
-        - jupytergis_core ={{ version }}
-        - jupytergis_lab ={{ version }}
-        - jupytergis_qgis ={{ version }}
+        - jupytergis-core ={{ version }}
+        - jupytergis-lab ={{ version }}
+        - jupytergis-qgis ={{ version }}
     test:
       imports:
         - jupytergis
