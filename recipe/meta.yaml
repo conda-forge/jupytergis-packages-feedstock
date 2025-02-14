@@ -29,7 +29,7 @@ build:
 
 
 outputs:
-  - name: jupytergis_core
+  - name: jupytergis-core
     version: {{ version }}
     build:
       noarch: python
@@ -58,7 +58,7 @@ outputs:
       requires:
         - pip
 
-  - name: jupytergis_lab
+  - name: jupytergis-lab
     version: {{ version }}
     build:
       noarch: python
@@ -93,7 +93,7 @@ outputs:
       requires:
         - pip
 
-  - name: jupytergis_qgis
+  - name: jupytergis-qgis
     version: {{ version }}
     build:
       noarch: python
@@ -126,7 +126,7 @@ outputs:
         - pip
         - qgis
 
-  - name: jupytergis_lite
+  - name: jupytergis-lite
     version: {{ version }}
     build:
       noarch: python
