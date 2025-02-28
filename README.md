@@ -36,9 +36,10 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis-green.svg)](https://anaconda.org/conda-forge/jupytergis) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis.svg)](https://anaconda.org/conda-forge/jupytergis) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis.svg)](https://anaconda.org/conda-forge/jupytergis) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis.svg)](https://anaconda.org/conda-forge/jupytergis) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis_core-green.svg)](https://anaconda.org/conda-forge/jupytergis_core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis_core.svg)](https://anaconda.org/conda-forge/jupytergis_core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis_core.svg)](https://anaconda.org/conda-forge/jupytergis_core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis_core.svg)](https://anaconda.org/conda-forge/jupytergis_core) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis_lab-green.svg)](https://anaconda.org/conda-forge/jupytergis_lab) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis_lab.svg)](https://anaconda.org/conda-forge/jupytergis_lab) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis_lab.svg)](https://anaconda.org/conda-forge/jupytergis_lab) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis_lab.svg)](https://anaconda.org/conda-forge/jupytergis_lab) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis_qgis-green.svg)](https://anaconda.org/conda-forge/jupytergis_qgis) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis_qgis.svg)](https://anaconda.org/conda-forge/jupytergis_qgis) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis_qgis.svg)](https://anaconda.org/conda-forge/jupytergis_qgis) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis_qgis.svg)](https://anaconda.org/conda-forge/jupytergis_qgis) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis--core-green.svg)](https://anaconda.org/conda-forge/jupytergis-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis-core.svg)](https://anaconda.org/conda-forge/jupytergis-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis-core.svg)](https://anaconda.org/conda-forge/jupytergis-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis-core.svg)](https://anaconda.org/conda-forge/jupytergis-core) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis--lab-green.svg)](https://anaconda.org/conda-forge/jupytergis-lab) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis-lab.svg)](https://anaconda.org/conda-forge/jupytergis-lab) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis-lab.svg)](https://anaconda.org/conda-forge/jupytergis-lab) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis-lab.svg)](https://anaconda.org/conda-forge/jupytergis-lab) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis--lite-green.svg)](https://anaconda.org/conda-forge/jupytergis-lite) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis-lite.svg)](https://anaconda.org/conda-forge/jupytergis-lite) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis-lite.svg)](https://anaconda.org/conda-forge/jupytergis-lite) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis-lite.svg)](https://anaconda.org/conda-forge/jupytergis-lite) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis--qgis-green.svg)](https://anaconda.org/conda-forge/jupytergis-qgis) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis-qgis.svg)](https://anaconda.org/conda-forge/jupytergis-qgis) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis-qgis.svg)](https://anaconda.org/conda-forge/jupytergis-qgis) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis-qgis.svg)](https://anaconda.org/conda-forge/jupytergis-qgis) |
 
 Installing jupytergis-packages
 ==============================
@@ -50,16 +51,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `jupytergis, jupytergis_core, jupytergis_lab, jupytergis_qgis` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `jupytergis, jupytergis-core, jupytergis-lab, jupytergis-lite, jupytergis-qgis` can be installed with `conda`:
 
 ```
-conda install jupytergis jupytergis_core jupytergis_lab jupytergis_qgis
+conda install jupytergis jupytergis-core jupytergis-lab jupytergis-lite jupytergis-qgis
 ```
 
 or with `mamba`:
 
 ```
-mamba install jupytergis jupytergis_core jupytergis_lab jupytergis_qgis
+mamba install jupytergis jupytergis-core jupytergis-lab jupytergis-lite jupytergis-qgis
 ```
 
 It is possible to list all of the versions of `jupytergis` available on your platform with `conda`:
