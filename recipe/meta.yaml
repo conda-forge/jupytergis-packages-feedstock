@@ -16,8 +16,8 @@ source:
   - url: https://pypi.org/packages/source/j/jupytergis_qgis/jupytergis_qgis-{{ version }}.tar.gz
     sha256: bf2f63bd32244abad4f69e376f78fb426136399917bc50ef6be37482d1d8b7a9
     folder: jupytergis_qgis
-  - url: https://files.pythonhosted.org/packages/d1/5e/38d92b8ccd905285abb77270583c671b9e4093d77a0be916f419afdcc9f8/jupytergis-{{ version }}.tar.gz
-    sha256: 918156df093899fb64aefe974c8c08c1e9fec952b5908aa87609bd8e039e1014
+  - url: https://pypi.org/packages/source/j/jupytergis_lite/jupytergis_lite-{{ version }}.tar.gz
+    sha256: f3edb70ed0e8ac2051551b3fc48610efa52f7c7eb95e36461a55a5167be07d4a
     folder: jupytergis_lite
   - url: https://pypi.org/packages/source/j/jupytergis/jupytergis-{{ version }}.tar.gz
     sha256: 918156df093899fb64aefe974c8c08c1e9fec952b5908aa87609bd8e039e1014
