@@ -171,6 +171,9 @@ outputs:
         - jupytergis-lab
         - jupytergis-qgis
         - jupyter-collaboration >=3,<4
+        - jupyter-collaboration-ui >=1,<2
+        - jupyter-docprovider >=1,<2
+        - jupyter-server-ydoc >=1,<2
         - jupyterlab >=4.3,<5
       run_constrained:
         - jupytergis-core ={{ version }}
