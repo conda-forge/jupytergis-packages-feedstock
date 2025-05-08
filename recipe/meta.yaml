@@ -82,6 +82,7 @@ outputs:
         - comm >=0.1.2,<0.2
         - pydantic >=2,<3
         - jupytergis-core
+        - sidecar >=0.7.0
       run_constrained:
         - jupytergis-core ={{ version }}
     test:
