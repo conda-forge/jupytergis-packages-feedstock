@@ -155,9 +155,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@arjxn-py](https://github.com/arjxn-py/)
 * [@martinRenou](https://github.com/martinRenou/)
 * [@mfisher87](https://github.com/mfisher87/)
-
-
-<!-- dummy commit to enable rerendering -->
 
