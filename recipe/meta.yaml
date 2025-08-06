@@ -202,5 +202,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - arjxn-py
     - mfisher87
     - martinRenou
