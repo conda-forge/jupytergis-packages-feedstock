@@ -1,5 +1,5 @@
 {% set name = "jupytergis-packages" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,19 +8,19 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/j/jupytergis_core/jupytergis_core-{{ version }}.tar.gz
-    sha256: 9ab824862857c783364ae5a857f2d71ea5ca8ca53d0355bf5767b12e17aa3308
+    sha256: 612359d5f838c2c45e7483f13f90867c6e05693864a45c7c6300a6c61832c36c
     folder: jupytergis_core
   - url: https://pypi.org/packages/source/j/jupytergis_lab/jupytergis_lab-{{ version }}.tar.gz
-    sha256: 3d0225892011a131f75d8634731e7439ed498dcd2bcd58c3571850c9c5043cad
+    sha256: ba864d5f05610fbb879edc66015ce6ebb6069814448234a65c7b6ce5c0ce86cc
     folder: jupytergis_lab
   - url: https://pypi.org/packages/source/j/jupytergis_qgis/jupytergis_qgis-{{ version }}.tar.gz
-    sha256: 6fedbc4eed8826bb49a0a090e853b0629ce358e80d8e153da47049a8fc9fb578
+    sha256: fa866b64a9c7fe4202276a4830e1522a93bf488f2b32a7544f0792c70d129c1f
     folder: jupytergis_qgis
   - url: https://pypi.org/packages/source/j/jupytergis_lite/jupytergis_lite-{{ version }}.tar.gz
-    sha256: 1e4c3d31ef648ab4ac02df40bc42675d5d51c3a9ad18c74941688b761f9fdb72
+    sha256: 2be3bc91c9fd165c0bd8021da2f2068975516e4975f434d9a5a62bdb447813a0
     folder: jupytergis_lite
   - url: https://pypi.org/packages/source/j/jupytergis/jupytergis-{{ version }}.tar.gz
-    sha256: 0b1e5c89da860583b245c64163cbf1df1f8449c2c18d690b5143c9a8c37c28b7
+    sha256: 132904c2a4a683f89e5bb55f06291e58ba22e5c2408b22b211a27ad04ebbba23
     folder: jupytergis
 
 build:
