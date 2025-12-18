@@ -25,7 +25,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
 
 
 outputs:
@@ -147,7 +147,7 @@ outputs:
         - python >={{ python_min }}
         - jupytergis-core
         - jupytergis-lab
-        - my-jupyter-shared-drive<0.2
+        - my-jupyter-shared-drive>=0.2.2
       run_constrained:
         - jupytergis-core ={{ version }}
         - jupytergis-lab ={{ version }}
