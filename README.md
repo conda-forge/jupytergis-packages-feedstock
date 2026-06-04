@@ -45,14 +45,14 @@ Current release info
 Installing jupytergis-packages
 ==============================
 
-Installing `jupytergis-packages` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `jupytergis-packages` from the `conda-forge/label/jupytergis_prerelease` channel can be achieved by adding `conda-forge/label/jupytergis_prerelease` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/jupytergis_prerelease
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `jupytergis, jupytergis-core, jupytergis-lab, jupytergis-lite, jupytergis-qgis` can be installed with `conda`:
+Once the `conda-forge/label/jupytergis_prerelease` channel has been enabled, `jupytergis, jupytergis-core, jupytergis-lab, jupytergis-lite, jupytergis-qgis` can be installed with `conda`:
 
 ```
 conda install jupytergis jupytergis-core jupytergis-lab jupytergis-lite jupytergis-qgis
@@ -67,26 +67,26 @@ mamba install jupytergis jupytergis-core jupytergis-lab jupytergis-lite jupyterg
 It is possible to list all of the versions of `jupytergis` available on your platform with `conda`:
 
 ```
-conda search jupytergis --channel conda-forge
+conda search jupytergis --channel conda-forge/label/jupytergis_prerelease
 ```
 
 or with `mamba`:
 
 ```
-mamba search jupytergis --channel conda-forge
+mamba search jupytergis --channel conda-forge/label/jupytergis_prerelease
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search jupytergis --channel conda-forge
+mamba repoquery search jupytergis --channel conda-forge/label/jupytergis_prerelease
 
 # List packages depending on `jupytergis`:
-mamba repoquery whoneeds jupytergis --channel conda-forge
+mamba repoquery whoneeds jupytergis --channel conda-forge/label/jupytergis_prerelease
 
 # List dependencies of `jupytergis`:
-mamba repoquery depends jupytergis --channel conda-forge
+mamba repoquery depends jupytergis --channel conda-forge/label/jupytergis_prerelease
 ```
 
 
