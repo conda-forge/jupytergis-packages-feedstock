@@ -1,6 +1,6 @@
 {% set name = "jupytergis-packages" %}
 {% set version = "0.16.0a0" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
