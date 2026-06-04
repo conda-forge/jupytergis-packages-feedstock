@@ -97,6 +97,7 @@ outputs:
         - if not exist %PREFIX%\\share\\jupyter\\labextensions\\@jupytergis/jupytergis-lab\\package.json (exit 1)          # [win]
       requires:
         - pip
+        - python {{ python_min }}
 
   - name: jupytergis-qgis
     version: {{ version }}
@@ -130,6 +131,7 @@ outputs:
       requires:
         - pip
         - qgis
+        - python {{ python_min }}
 
   - name: jupytergis-lite
     version: {{ version }}
@@ -147,7 +149,7 @@ outputs:
         - python >={{ python_min }}
         - jupytergis-core
         - jupytergis-lab
-        - my-jupyter-shared-drive>=0.2.2
+        - my-jupyter-shared-drive >=0.2.2
       run_constrained:
         - jupytergis-core ={{ version }}
         - jupytergis-lab ={{ version }}
