@@ -204,16 +204,16 @@ outputs:
             - jupytergis
           pip_check: true
 
-  - name: jupytergis-tiler
-    version: {{ version }}
+  - package:
+      name: jupytergis-tiler
     build:
       noarch: generic
     requirements:
       run:
         - jupytergis
         - jupyter-tiler >=0.8.0
-      run_constraint:
-        - jupytergis ={{ version }}
+      run_constraints:
+        - jupytergis =${{ version }}
 
 about:
   summary: A JupyterLab extension for collaborative GIS
