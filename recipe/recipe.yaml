@@ -127,13 +127,6 @@ outputs:
         - jupyterlab >=4.5.1
         - jupytergis-lab =${{ version }}
         - jupytergis-core =${{ version }}
-        # TEMP (I hope...): QGIS depends on `qca` with no pin. In
-        # `qca ==2.3.10-1`, it switched from qt5 to qt6. The QGIS feedstock
-        # doesn't yet support qt6, so there are no versions of QGIS on
-        # conda-forge that work without the user needing to add this
-        # constraint.
-        # <https://github.com/conda-forge/qgis-feedstock/issues/596>
-        - qca <2.3.10
     tests:
       - python:
           python_version: ${{ python_min }}.*
