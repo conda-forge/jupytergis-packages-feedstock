@@ -49,6 +49,7 @@ outputs:
         - python >={{ python_min }}
         - jupyter_ydoc >=2,<4
         - branca >=0.6
+        - webcolors
       run_constrained:
         - jupyterlab >=4.5.1
     test:
