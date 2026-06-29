@@ -1,5 +1,5 @@
-About jupytergis-packages-feedstock
-===================================
+About jupytergis-feedstock
+==========================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupytergis-packages-feedstock/blob/main/LICENSE.txt)
 
@@ -15,7 +15,6 @@ Documentation: https://jupytergis.readthedocs.io/en/latest
 
 jupytergis is a JupyterLab extension for GIS with collaborative editing support. It is designed to allow multiple people to work on the same file at the same time, and to facilitate discussion and collaboration around the GIS visualization being created.
 jupytergis has support for QGIS files, which makes it easy to import and export models from QGIS. It also has a range of features for creating and manipulating layers.
-
 
 Current build status
 ====================
@@ -41,27 +40,28 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis--lab-green.svg)](https://anaconda.org/conda-forge/jupytergis-lab) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis-lab.svg)](https://anaconda.org/conda-forge/jupytergis-lab) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis-lab.svg)](https://anaconda.org/conda-forge/jupytergis-lab) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis-lab.svg)](https://anaconda.org/conda-forge/jupytergis-lab) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis--lite-green.svg)](https://anaconda.org/conda-forge/jupytergis-lite) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis-lite.svg)](https://anaconda.org/conda-forge/jupytergis-lite) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis-lite.svg)](https://anaconda.org/conda-forge/jupytergis-lite) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis-lite.svg)](https://anaconda.org/conda-forge/jupytergis-lite) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis--qgis-green.svg)](https://anaconda.org/conda-forge/jupytergis-qgis) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis-qgis.svg)](https://anaconda.org/conda-forge/jupytergis-qgis) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis-qgis.svg)](https://anaconda.org/conda-forge/jupytergis-qgis) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis-qgis.svg)](https://anaconda.org/conda-forge/jupytergis-qgis) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis--tiler-green.svg)](https://anaconda.org/conda-forge/jupytergis-tiler) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis-tiler.svg)](https://anaconda.org/conda-forge/jupytergis-tiler) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis-tiler.svg)](https://anaconda.org/conda-forge/jupytergis-tiler) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis-tiler.svg)](https://anaconda.org/conda-forge/jupytergis-tiler) |
 
-Installing jupytergis-packages
-==============================
+Installing jupytergis
+=====================
 
-Installing `jupytergis-packages` from the `conda-forge/label/jupytergis_prerelease` channel can be achieved by adding `conda-forge/label/jupytergis_prerelease` to your channels with:
+Installing `jupytergis` from the `conda-forge/label/jupytergis_prerelease` channel can be achieved by adding `conda-forge/label/jupytergis_prerelease` to your channels with:
 
 ```
 conda config --add channels conda-forge/label/jupytergis_prerelease
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/jupytergis_prerelease` channel has been enabled, `jupytergis, jupytergis-core, jupytergis-lab, jupytergis-lite, jupytergis-qgis` can be installed with `conda`:
+Once the `conda-forge/label/jupytergis_prerelease` channel has been enabled, `jupytergis, jupytergis-core, jupytergis-lab, jupytergis-lite, jupytergis-qgis, jupytergis-tiler` can be installed with `conda`:
 
 ```
-conda install jupytergis jupytergis-core jupytergis-lab jupytergis-lite jupytergis-qgis
+conda install jupytergis jupytergis-core jupytergis-lab jupytergis-lite jupytergis-qgis jupytergis-tiler
 ```
 
 or with `mamba`:
 
 ```
-mamba install jupytergis jupytergis-core jupytergis-lab jupytergis-lite jupytergis-qgis
+mamba install jupytergis jupytergis-core jupytergis-lab jupytergis-lite jupytergis-qgis jupytergis-tiler
 ```
 
 It is possible to list all of the versions of `jupytergis` available on your platform with `conda`:
@@ -131,17 +131,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating jupytergis-packages-feedstock
-======================================
+Updating jupytergis-feedstock
+=============================
 
-If you would like to improve the jupytergis-packages recipe or build a new
+If you would like to improve the jupytergis recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/jupytergis-packages-feedstock are
+Note that all branches in the conda-forge/jupytergis-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
