@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.16.0"
+  version: "0.16.0a4"
   build_number: 0
   python_min: "3.12"
 
@@ -10,21 +10,21 @@ recipe:
   version: ${{ version }}
 
 source:
-  - url: https://pypi.org/packages/source/j/jupytergis_core/jupytergis_core-${{ version }}.tar.gz
-    sha256: TODO
-    target_directory: jupytergis_core
-  - url: https://pypi.org/packages/source/j/jupytergis_lab/jupytergis_lab-${{ version }}.tar.gz
-    sha256: TODO
-    target_directory: jupytergis_lab
-  - url: https://pypi.org/packages/source/j/jupytergis_qgis/jupytergis_qgis-${{ version }}.tar.gz
-    sha256: TODO
-    target_directory: jupytergis_qgis
-  - url: https://pypi.org/packages/source/j/jupytergis_lite/jupytergis_lite-${{ version }}.tar.gz
-    sha256: TODO
-    target_directory: jupytergis_lite
-  - url: https://pypi.org/packages/source/j/jupytergis/jupytergis-${{ version }}.tar.gz
-    sha256: TODO
-    target_directory: jupytergis
+  - target_directory: jupytergis_core
+    url: https://pypi.org/packages/source/j/jupytergis_core/jupytergis_core-${{ version }}.tar.gz
+    sha256: 7517d43998f825da85b6566e2f30f9080afa06f1d9065e1743adbbc00dfc288c
+  - target_directory: jupytergis_lab
+    url: https://pypi.org/packages/source/j/jupytergis_lab/jupytergis_lab-${{ version }}.tar.gz
+    sha256: 3a3543da7692b327b0540ba9c7d51073d5216385c25dbe78acfd4a5bddced494
+  - target_directory: jupytergis_qgis
+    url: https://pypi.org/packages/source/j/jupytergis_qgis/jupytergis_qgis-${{ version }}.tar.gz
+    sha256: fa65d54255c52821a7790e0dfc50ac3c279bc09d87b1c9007be713227836c0f6
+  - target_directory: jupytergis_lite
+    url: https://pypi.org/packages/source/j/jupytergis_lite/jupytergis_lite-${{ version }}.tar.gz
+    sha256: 1161a6022010e99345a7bda37b815efa3ef69879906e420eaa24ee46fa7a200c
+  - target_directory: jupytergis
+    url: https://pypi.org/packages/source/j/jupytergis/jupytergis-${{ version }}.tar.gz
+    sha256: 7f47761d73907e4a53ca75dfaaa4cca8004973173605c4a9eca7a3b5259a95ad
 
 build:
   noarch: python
@@ -50,6 +50,8 @@ outputs:
       run:
         - python >=${{ python_min }}
         - jupyter_ydoc >=2,<4
+        - branca >=0.6
+        - webcolors
       run_constraints:
         - jupyterlab >=4.5.1
     tests:
