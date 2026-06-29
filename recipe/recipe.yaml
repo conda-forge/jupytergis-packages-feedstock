@@ -90,6 +90,7 @@ outputs:
         - pydantic >=2,<3
         - jupytergis-core
         - sidecar >=0.7.0
+        - py2vega >=0.7.0
       run_constraints:
         - jupyterlab >=4.5.1
         - jupytergis-core =${{ version }}
