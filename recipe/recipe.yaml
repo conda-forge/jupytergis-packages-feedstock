@@ -82,18 +82,17 @@ outputs:
         - hatch-nodejs-version >=0.3.2
       run:
         - python >=${{ python_min }}
+        - ${{ pin_subpackage("jupytergis-core", exact=True) }}
         - requests
         - jupyter_ydoc >=2,<4
         - ypywidgets >=0.9.0,<0.10
         - yjs-widgets >=0.5,<0.6
         - comm >=0.1.2,<0.2
         - pydantic >=2,<3
-        - jupytergis-core
         - sidecar >=0.7.0
         - py2vega >=0.7.0
       run_constraints:
         - jupyterlab >=4.5.1
-        - jupytergis-core =${{ version }}
     tests:
       - python:
           python_version: ${{ python_min }}.*
@@ -122,14 +121,12 @@ outputs:
         - hatch-nodejs-version >=0.3.2
       run:
         - python >=${{ python_min }}
+        - ${{ pin_subpackage("jupytergis-core", exact=True) }}
+        - ${{ pin_subpackage("jupytergis-lab", exact=True) }}
         - jupyter_server >=2.0.1,<3
         - jupyter_ydoc >=2,<4
-        - jupytergis-core
-        - jupytergis-lab
       run_constraints:
         - jupyterlab >=4.5.1
-        - jupytergis-lab =${{ version }}
-        - jupytergis-core =${{ version }}
     tests:
       - python:
           python_version: ${{ python_min }}.*
@@ -154,12 +151,9 @@ outputs:
         - hatchling
       run:
         - python >=${{ python_min }}
-        - jupytergis-core
-        - jupytergis-lab
+        - ${{ pin_subpackage("jupytergis-core", exact=True) }}
+        - ${{ pin_subpackage("jupytergis-lab", exact=True) }}
         - my-jupyter-shared-drive >=0.2.2
-      run_constraints:
-        - jupytergis-core =${{ version }}
-        - jupytergis-lab =${{ version }}
     tests:
       - python:
           python_version: ${{ python_min }}.*
@@ -181,18 +175,15 @@ outputs:
         - hatchling
       run:
         - python >=${{ python_min }}
-        - jupytergis-core
-        - jupytergis-lab
-        - jupytergis-qgis
+        - ${{ pin_subpackage("jupytergis-core", exact=True) }}
+        - ${{ pin_subpackage("jupytergis-lab", exact=True) }}
+        - ${{ pin_subpackage("jupytergis-qgis", exact=True) }}
         - jupyter-collaboration >=4,<5
         - jupyter-collaboration-ui >=2,<3
         - jupyter-docprovider >=2,<3
         - jupyter_server_ydoc >=2,<3
       run_constraints:
         - jupyterlab >=4.5.1
-        - jupytergis-core =${{ version }}
-        - jupytergis-lab =${{ version }}
-        - jupytergis-qgis =${{ version }}
     tests:
       - python:
           python_version: ${{ python_min }}.*
@@ -206,10 +197,8 @@ outputs:
       noarch: generic
     requirements:
       run:
-        - jupytergis
+        - ${{ pin_subpackage("jupytergis", exact=True) }}
         - jupyter-tiler >=0.8.0
-      run_constraints:
-        - jupytergis =${{ version }}
     tests:
       - python:
           python_version: ${{ python_min }}.*
