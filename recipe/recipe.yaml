@@ -154,6 +154,7 @@ outputs:
         - ${{ pin_subpackage("jupytergis-core", exact=True) }}
         - ${{ pin_subpackage("jupytergis-lab", exact=True) }}
         - my-jupyter-shared-drive >=0.2.2
+        - jupyterlab-tour >=4,<5
     tests:
       - python:
           python_version: ${{ python_min }}.*
@@ -182,6 +183,7 @@ outputs:
         - jupyter-collaboration-ui >=2,<3
         - jupyter-docprovider >=2,<3
         - jupyter_server_ydoc >=2,<3
+        - jupyterlab-tour >=4,<5
       run_constraints:
         - jupyterlab >=4.5.1
     tests:
