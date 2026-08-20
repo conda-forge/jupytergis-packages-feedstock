@@ -40,6 +40,7 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis--lab-green.svg)](https://anaconda.org/conda-forge/jupytergis-lab) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis-lab.svg)](https://anaconda.org/conda-forge/jupytergis-lab) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis-lab.svg)](https://anaconda.org/conda-forge/jupytergis-lab) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis-lab.svg)](https://anaconda.org/conda-forge/jupytergis-lab) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis--lite-green.svg)](https://anaconda.org/conda-forge/jupytergis-lite) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis-lite.svg)](https://anaconda.org/conda-forge/jupytergis-lite) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis-lite.svg)](https://anaconda.org/conda-forge/jupytergis-lite) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis-lite.svg)](https://anaconda.org/conda-forge/jupytergis-lite) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis--qgis-green.svg)](https://anaconda.org/conda-forge/jupytergis-qgis) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis-qgis.svg)](https://anaconda.org/conda-forge/jupytergis-qgis) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis-qgis.svg)](https://anaconda.org/conda-forge/jupytergis-qgis) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis-qgis.svg)](https://anaconda.org/conda-forge/jupytergis-qgis) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-jupytergis--tiler-green.svg)](https://anaconda.org/conda-forge/jupytergis-tiler) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupytergis-tiler.svg)](https://anaconda.org/conda-forge/jupytergis-tiler) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupytergis-tiler.svg)](https://anaconda.org/conda-forge/jupytergis-tiler) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupytergis-tiler.svg)](https://anaconda.org/conda-forge/jupytergis-tiler) |
 
 Installing jupytergis
 =====================
@@ -51,31 +52,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `jupytergis, jupytergis-core, jupytergis-lab, jupytergis-lite, jupytergis-qgis` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
-conda install jupytergis jupytergis-core jupytergis-lab jupytergis-lite jupytergis-qgis
+conda install jupytergis jupytergis-core jupytergis-lab jupytergis-lite jupytergis-qgis jupytergis-tiler
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
-mamba install jupytergis jupytergis-core jupytergis-lab jupytergis-lite jupytergis-qgis
+mamba install jupytergis jupytergis-core jupytergis-lab jupytergis-lite jupytergis-qgis jupytergis-tiler
 ```
 
-It is possible to list all of the versions of `jupytergis` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add jupytergis jupytergis-core jupytergis-lab jupytergis-lite jupytergis-qgis jupytergis-tiler
+# for installing globally
+pixi global install jupytergis jupytergis-core jupytergis-lab jupytergis-lite jupytergis-qgis jupytergis-tiler
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `jupytergis` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search jupytergis --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search jupytergis --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search jupytergis --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -87,6 +130,8 @@ mamba repoquery whoneeds jupytergis --channel conda-forge
 # List dependencies of `jupytergis`:
 mamba repoquery depends jupytergis --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
