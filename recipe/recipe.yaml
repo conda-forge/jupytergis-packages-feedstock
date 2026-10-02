@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.16.6"
+  version: "0.16.7"
   build_number: 0
   python_min: "3.12"
 
@@ -12,19 +12,19 @@ recipe:
 source:
   - target_directory: jupytergis_core
     url: https://pypi.org/packages/source/j/jupytergis_core/jupytergis_core-${{ version }}.tar.gz
-    sha256: a32252c7efcd887dcf672eeb5289bb93b6e183d6066838e94ce8eba583a89b87
+    sha256: 5eea0758328a308a496be98b1744ed164e23e080b033fb330abf97d92bfb89d2 
   - target_directory: jupytergis_lab
     url: https://pypi.org/packages/source/j/jupytergis_lab/jupytergis_lab-${{ version }}.tar.gz
-    sha256: 022b6beeb7fb15db5826c1a0115f1e9c0ce86d924e1d2964099ebbd63c38196c
+    sha256: 5b9b6a09d94c356cb6e2d971807e31dd71ecbe68a8a69fd0e2b8a98124318d3e
   - target_directory: jupytergis_qgis
     url: https://pypi.org/packages/source/j/jupytergis_qgis/jupytergis_qgis-${{ version }}.tar.gz
-    sha256: 67a2bd63a1372aa05458dfb94f92de4207094b56c692ffa83f607a4892183e48
+    sha256: 85a3f4e3658b197ac117ea9e0076edfdae9ea75ed9f49dbea6d8a1fb4494f0ec
   - target_directory: jupytergis_lite
     url: https://pypi.org/packages/source/j/jupytergis_lite/jupytergis_lite-${{ version }}.tar.gz
-    sha256: c2a68bfb62cfa779ce2a6ac708d71a27c4c448a199af4d548f46bede119bf6b9
+    sha256: 0c049ff40f2dbfdae10b642d07f752ee2bc9d8e574099c7649316f6b2af3e074
   - target_directory: jupytergis
     url: https://pypi.org/packages/source/j/jupytergis/jupytergis-${{ version }}.tar.gz
-    sha256: 24dde44605d320b3ae5908a63ab6e8a10b3212a41adc360521f1ded4d1456942
+    sha256: ecce570fa9703b6775226d823d2d701d1dce606f0aa13c863c26c7e3c7e5a2a2
 
 build:
   noarch: python
@@ -56,7 +56,9 @@ outputs:
         - jupyterlab >=4.6
     tests:
       - python:
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
           imports:
             - jupytergis_core
           pip_check: true
@@ -95,7 +97,9 @@ outputs:
         - jupyterlab >=4.6
     tests:
       - python:
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
           imports:
             - jupytergis_lab.notebook.gis_document
           pip_check: true
@@ -129,7 +133,9 @@ outputs:
         - jupyterlab >=4.6
     tests:
       - python:
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
           pip_check: true
       - script:
           - python -c "import jupytergis_qgis.qgis_loader"
@@ -157,7 +163,9 @@ outputs:
         - jupyterlab-tour >=4,<5
     tests:
       - python:
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
           imports:
             - jupytergis
           pip_check: true
@@ -188,7 +196,9 @@ outputs:
         - jupyterlab >=4.6
     tests:
       - python:
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
           imports:
             - jupytergis
           pip_check: true
@@ -203,7 +213,9 @@ outputs:
         - jupyter-tiler >=0.8.0
     tests:
       - python:
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
           imports:
             - jupyter_tiler
 
