@@ -56,7 +56,9 @@ outputs:
         - jupyterlab >=4.6
     tests:
       - python:
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
           imports:
             - jupytergis_core
           pip_check: true
@@ -95,7 +97,9 @@ outputs:
         - jupyterlab >=4.6
     tests:
       - python:
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
           imports:
             - jupytergis_lab.notebook.gis_document
           pip_check: true
@@ -129,7 +133,9 @@ outputs:
         - jupyterlab >=4.6
     tests:
       - python:
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
           pip_check: true
       - script:
           - python -c "import jupytergis_qgis.qgis_loader"
@@ -157,7 +163,9 @@ outputs:
         - jupyterlab-tour >=4,<5
     tests:
       - python:
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
           imports:
             - jupytergis
           pip_check: true
@@ -188,7 +196,9 @@ outputs:
         - jupyterlab >=4.6
     tests:
       - python:
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
           imports:
             - jupytergis
           pip_check: true
@@ -203,7 +213,9 @@ outputs:
         - jupyter-tiler >=0.8.0
     tests:
       - python:
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
           imports:
             - jupyter_tiler
 
