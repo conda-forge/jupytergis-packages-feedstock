@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   version: "0.18.6"
-  build_number: 0
+  build_number: 1
   python_min: "3.12"
 
 recipe:
@@ -142,6 +142,7 @@ outputs:
         requirements:
           run:
             - qgis
+            - draco >=1.5.9
 
   - package:
       name: jupytergis-lite
@@ -187,13 +188,12 @@ outputs:
         - ${{ pin_subpackage("jupytergis-core", exact=True) }}
         - ${{ pin_subpackage("jupytergis-lab", exact=True) }}
         - ${{ pin_subpackage("jupytergis-qgis", exact=True) }}
-        - jupyter-collaboration >=4,<5
-        - jupyter-collaboration-ui >=2,<3
-        - jupyter-docprovider >=2,<3
-        - jupyter_server_ydoc >=2,<3
-        - jupyterlab-tour >=4,<5
-      run_constraints:
+        - jupyter-collaboration >=4,<6
+        - jupyter-collaboration-ui >=2,<4
+        - jupyter-docprovider >=2,<4
+        - jupyter_server_ydoc >=2,<4
         - jupyterlab >=4.6
+        - jupyterlab-tour >=4,<5
     tests:
       - python:
           python_version:
@@ -210,7 +210,8 @@ outputs:
     requirements:
       run:
         - ${{ pin_subpackage("jupytergis", exact=True) }}
-        - jupyter-tiler >=0.8.0
+        - jupyter-tiler >=0.8.1
+        - sniffio
     tests:
       - python:
           python_version:
