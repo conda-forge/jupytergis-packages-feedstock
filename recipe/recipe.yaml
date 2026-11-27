@@ -142,6 +142,7 @@ outputs:
         requirements:
           run:
             - qgis
+            - draco >=1.5.9
 
   - package:
       name: jupytergis-lite
